@@ -34,5 +34,11 @@ namespace UserProcessing
             services
                 .AddTransient<IUserProcessor, Services.UserProcessor>()
                 .AddTransient<ISocialSecurityNumberValidator, SocialSecurityNumberValidator>();
+
+        //.AddTransient<IHandler<User>>(x =>
+        //    new SocialSecurityNumberValidatorHandler(x.GetRequiredService<ISocialSecurityNumberValidator>()));
+        //.AddTransient<IHandler<User>>(x => new AgeValidationHandler())
+        //.AddTransient<IHandler<User>>(x => new NameValidationHandler())
+        //.AddTransient<IHandler<User>>(x => new CitizenshipRegionValidationHandler());
     }
 }
